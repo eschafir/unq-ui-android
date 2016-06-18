@@ -8,39 +8,37 @@ import java.util.List;
 public class Laberinto {
     private String nombre;
     private String path;
-   // private List<Item> inventario;
+    private List<Item> inventario;
 
-    public String getNombre(){
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre){
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public String getPath(){
+    public String getPath() {
         return path;
     }
 
-    public void setPath(String path){
+    public void setPath(String path) {
         this.path = path;
     }
 
-//    public List<Item> getInventario(){
-//        return inventario;
-//    }
+    public List<Item> getInventario() {
+        return inventario;
+    }
 
-//    public void setInventario(List<Item> inventario){
-//        this.inventario = inventario;
-//    }
+    public void setInventario(List<Item> inventario) {
+        this.inventario = inventario;
+    }
 
-    public Laberinto(String nombre, String path){
+    public Laberinto(String nombre, String path) {
         this.nombre = nombre;
         this.path = path;
-       // this.inventario = inventario;
+        // this.inventario = inventario;
     }
-
-
 
 
 }
