@@ -1,14 +1,24 @@
 package com.example.esteban.gatoencerrado.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Esteban on 13/6/2016.
  */
-public class Laberinto {
-    private String nombre;
-    private String path;
-    private List<Item> inventario;
+public class Laberinto implements Serializable {
+    Long id;
+    String nombre;
+    String path;
+    List<Item> inventario;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getNombre() {
         return nombre;
@@ -34,10 +44,10 @@ public class Laberinto {
         this.inventario = inventario;
     }
 
-    public Laberinto(String nombre, String path) {
+    public Laberinto(String nombre, String path, List<Item> inventario) {
         this.nombre = nombre;
         this.path = path;
-        // this.inventario = inventario;
+        this.inventario = inventario;
     }
 
 
