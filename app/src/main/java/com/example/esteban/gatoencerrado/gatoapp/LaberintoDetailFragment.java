@@ -2,7 +2,6 @@ package com.example.esteban.gatoencerrado.gatoapp;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -42,12 +41,13 @@ public class LaberintoDetailFragment extends Fragment {
             laberinto = (Laberinto) getArguments().get(ARG_ITEM_ID);
 
             Activity activity = this.getActivity();
-            CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
+            activity.setTitle(laberinto.getNombre());
+            /*CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
                 appBarLayout.setTitle(laberinto.getNombre());
             } else {
                 activity.setTitle(laberinto.getNombre());
-            }
+            }*/
         }
     }
 
