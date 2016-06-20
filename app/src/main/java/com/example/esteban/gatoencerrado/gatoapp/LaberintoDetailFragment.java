@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.esteban.gatoencerrado.R;
 import com.example.esteban.gatoencerrado.model.Laberinto;
@@ -53,6 +55,15 @@ public class LaberintoDetailFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+        View rootView = inflater.inflate(R.layout.fragment_laberinto_detail, container, false);
+
+        // Show the dummy content as text in a TextView.
+        if (laberinto != null) {
+            ImageView imgLaberinto = ((ImageView) rootView.findViewById(R.id.imgLaberinto));
+            imgLaberinto.setImageDrawable(getResources().getDrawable(new GeneroAdapter().getIconoGenero(pelicula)));
+            ((TextView) rootView.findViewById(R.id.laberinto_descripcion)).setText(laberinto.getDescripcion());
+        }
+
+        return rootView;
     }
 }

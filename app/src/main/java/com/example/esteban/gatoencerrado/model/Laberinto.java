@@ -1,7 +1,9 @@
 package com.example.esteban.gatoencerrado.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Esteban on 13/6/2016.
@@ -9,7 +11,8 @@ import java.util.List;
 public class Laberinto implements Serializable {
     Long id;
     String nombre;
-    String path;
+    String descripcion;
+    int path;
     List<Item> inventario;
 
     public Long getId() {
@@ -28,11 +31,19 @@ public class Laberinto implements Serializable {
         this.nombre = nombre;
     }
 
-    public String getPath() {
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public int getPath() {
         return path;
     }
 
-    public void setPath(String path) {
+    public void setPath(int path) {
         this.path = path;
     }
 
@@ -44,11 +55,19 @@ public class Laberinto implements Serializable {
         this.inventario = inventario;
     }
 
-    public Laberinto(String nombre, String path, List<Item> inventario) {
+    public Laberinto(String nombre, int path) {
+        this.id = new Random().nextLong();
         this.nombre = nombre;
+        this.descripcion = "";
+        this.path = path;
+        this.inventario = new ArrayList<Item>();
+    }
+
+    public Laberinto(Long id, String nombre, String descripcion, int path, List<Item> inventario) {
+        this.id = id;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
         this.path = path;
         this.inventario = inventario;
     }
-
-
 }
