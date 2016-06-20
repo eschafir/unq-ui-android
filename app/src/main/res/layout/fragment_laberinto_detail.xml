@@ -3,20 +3,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+
+    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/imgLaberinto"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/imgLaberinto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:paddingTop="8dp" />
-
-
-    </RelativeLayout>
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="8dp" />
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -28,7 +21,6 @@
         android:textIsSelectable="true"
         tools:context=".LaberintoDetailFragment" />
 
-
     <Button
         android:id="@+id/laberinto_inventario"
         android:layout_width="wrap_content"
@@ -36,6 +28,5 @@
         android:layout_gravity="center_horizontal"
         android:onClick="mostrarInventario"
         android:text="@string/inventario" />
-
 
 </LinearLayout>
