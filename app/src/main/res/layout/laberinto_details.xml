@@ -40,5 +40,14 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
+    <Button
+        android:id="@+id/laberinto_inventario"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:onClick="mostrarInventario"
+        android:text="Inventario" />
 
 </android.support.design.widget.CoordinatorLayout>
+
+
+
