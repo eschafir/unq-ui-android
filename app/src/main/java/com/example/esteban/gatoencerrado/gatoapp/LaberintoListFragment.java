@@ -4,12 +4,8 @@ package com.example.esteban.gatoencerrado.gatoapp;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.Animation;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.esteban.gatoencerrado.adapter.LaberintoAdapter;
 import com.example.esteban.gatoencerrado.model.Laberinto;
@@ -33,11 +29,6 @@ public class LaberintoListFragment extends ListFragment implements View.OnClickL
      */
     public interface Callbacks {
         void onItemSelected(Laberinto laberinto);
-    }
-
-    @Override
-    public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
-        return super.onCreateAnimation(transit, enter, nextAnim);
     }
 
     /**
@@ -67,16 +58,6 @@ public class LaberintoListFragment extends ListFragment implements View.OnClickL
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-    }
-
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-    }
-
-    @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
 
@@ -98,22 +79,8 @@ public class LaberintoListFragment extends ListFragment implements View.OnClickL
     @Override
     public void onListItemClick(ListView listView, View v, int position, long id) {
         super.onListItemClick(listView, v, position, id);
-
         Laberinto laberinto = (Laberinto) listView.getAdapter().getItem(position);
-        Toast.makeText(getContext(), laberinto.getNombre(), Toast.LENGTH_LONG).show();
-
         mCallbacks.onItemSelected(laberinto);
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-    }
-
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
