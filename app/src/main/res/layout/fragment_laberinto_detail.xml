@@ -3,18 +3,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/imgLaberinto"
-            android:layout_width="@dimen/icono"
-            android:layout_height="@dimen/icono" />
+            android:paddingTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"

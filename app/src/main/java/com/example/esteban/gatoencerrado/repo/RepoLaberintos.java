@@ -36,7 +36,7 @@ public class RepoLaberintos {
     private void init() {
 
         RepoLaberintos.getInstance().agregarLaberinto(new Laberinto("Casa abandonada", "Una casa construida en 1910. La leyenda cuenta que alli moran los espiritus de la familia Ripper.", R.drawable.casa, new ArrayList<Item>()));
-//        RepoLaberintos.getInstance().agregarLaberinto(new Laberinto("Hospital", "path", new ArrayList<Item>()));
+        RepoLaberintos.getInstance().agregarLaberinto(new Laberinto("Hospital", "El Hospital de la ciudad. No solo deberas encontrar la salida de este laberintos, sino que deberas evitar a los enfermos contagiosos. Es recomendable tenes experiencia en resolucion de laberintos para jugar este nivel.", R.drawable.hospital, new ArrayList<Item>()));
 //        RepoLaberintos.getInstance().agregarLaberinto(new Laberinto("Estacion de bomberos", "path", new ArrayList<Item>()));
 //        RepoLaberintos.getInstance().agregarLaberinto(new Laberinto("Prision", "path", new ArrayList<Item>()));
 //        RepoLaberintos.getInstance().agregarLaberinto(new Laberinto("Museo", "path", new ArrayList<Item>()));
