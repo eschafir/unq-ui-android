@@ -42,12 +42,12 @@ public class LaberintoDetailFragment extends Fragment {
 
             Activity activity = this.getActivity();
             activity.setTitle(laberinto.getNombre());
-            /*CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
+            CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
                 appBarLayout.setTitle(laberinto.getNombre());
             } else {
                 activity.setTitle(laberinto.getNombre());
-            }*/
+            }
         }
     }
 

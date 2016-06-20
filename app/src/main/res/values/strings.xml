@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">GatoEncerrado</string>
+    <string name="app_name">GatoEncerradoApp</string>
+    <string name="title_laberinto_detail">Laberinto Detail</string>
 </resources>
