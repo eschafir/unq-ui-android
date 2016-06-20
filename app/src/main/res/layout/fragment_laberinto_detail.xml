@@ -10,10 +10,10 @@
 
         <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/imgLaberinto"
-            android:paddingTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:paddingTop="8dp" />
 
 
     </RelativeLayout>
@@ -27,5 +27,15 @@
         android:padding="30dp"
         android:textIsSelectable="true"
         tools:context=".LaberintoDetailFragment" />
+
+
+    <Button
+        android:id="@+id/laberinto_inventario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="mostrarInventario"
+        android:text="@string/inventario" />
+
 
 </LinearLayout>
