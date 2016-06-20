@@ -60,7 +60,7 @@ public class LaberintoDetailFragment extends Fragment {
         // Show the dummy content as text in a TextView.
         if (laberinto != null) {
             ImageView imgLaberinto = ((ImageView) rootView.findViewById(R.id.imgLaberinto));
-            imgLaberinto.setImageDrawable(getResources().getDrawable(new GeneroAdapter().getIconoGenero(pelicula)));
+            imgLaberinto.setImageDrawable(getResources().getDrawable(laberinto.getPath()));
             ((TextView) rootView.findViewById(R.id.laberinto_descripcion)).setText(laberinto.getDescripcion());
         }
 

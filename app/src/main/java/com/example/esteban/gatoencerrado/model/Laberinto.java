@@ -63,8 +63,8 @@ public class Laberinto implements Serializable {
         this.inventario = new ArrayList<Item>();
     }
 
-    public Laberinto(Long id, String nombre, String descripcion, int path, List<Item> inventario) {
-        this.id = id;
+    public Laberinto(String nombre, String descripcion, int path, List<Item> inventario) {
+        this.id = new Random().nextLong();
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.path = path;

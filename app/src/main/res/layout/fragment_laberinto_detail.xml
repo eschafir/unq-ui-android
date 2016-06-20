@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,8 +10,9 @@
 
         <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/imgLaberinto"
-            android:layout_width="80dp"
-            android:layout_height="80dp" />
+            android:layout_width="@dimen/icono"
+            android:layout_height="@dimen/icono" />
+
 
     </LinearLayout>
 
@@ -22,9 +22,8 @@
         style="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
+        android:padding="30dp"
         android:textIsSelectable="true"
         tools:context=".LaberintoDetailFragment" />
-
 
 </LinearLayout>
