@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.esteban.gatoencerrado.R;
+import com.example.esteban.gatoencerrado.model.Item;
 
 public class LaberintoDetailActivity extends AppCompatActivity {
 

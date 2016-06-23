@@ -97,4 +97,17 @@ public class RepoLaberintos {
         }
         return result;
     }
+
+    public List<Item> getListaItems(String nombre, int max) {
+        Iterator<Item> it = listaItems.iterator();
+        List<Item> result = new ArrayList<Item>();
+        while (it.hasNext() && max > 0) {
+            Item item = it.next();
+            max--;
+            if (nombre == null || item.getNombre().toUpperCase().contains(nombre.toUpperCase())) {
+                result.add(item);
+            }
+        }
+        return result;
+    }
 }
