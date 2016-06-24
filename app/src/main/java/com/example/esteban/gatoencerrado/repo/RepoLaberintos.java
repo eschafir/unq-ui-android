@@ -24,7 +24,7 @@ public class RepoLaberintos {
 
     private RepoLaberintos() {
         laberintos = new ArrayList<Laberinto>();
-        listaItems = inicializarItems();
+        listaItems = new ArrayList<Item>();
     }
 
     private List<Item> inicializarItems() {
@@ -74,11 +74,18 @@ public class RepoLaberintos {
         RepoLaberintos.getInstance().agregarLaberinto(new Laberinto("Estacion de bomberos", "Estacion de Bomberos de la Ciudad de Buenos Aires. Apresurate a encontrar la salida antes de caer en llamas!!", R.drawable.bomberos, new ArrayList<Item>()));
         RepoLaberintos.getInstance().agregarLaberinto(new Laberinto("Prision", "PRISION BREAK", R.drawable.prision, new ArrayList<Item>()));
         RepoLaberintos.getInstance().agregarLaberinto(new Laberinto("Museo", "Una noche en el museo", R.drawable.museo, new ArrayList<Item>()));
+        RepoLaberintos.getInstance().agregarItem(new Item("Pala"));
+        RepoLaberintos.getInstance().agregarItem(new Item("Pico"));
     }
 
     public void agregarLaberinto(Laberinto laberinto) {
         laberinto.setId(getMaximoId());
         laberintos.add(laberinto);
+    }
+
+    public void agregarItem(Item item){
+        item.setId(getMaximoId());
+        listaItems.add(item);
     }
 
     public Long getMaximoId() {

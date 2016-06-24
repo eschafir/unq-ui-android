@@ -39,10 +39,9 @@ public class LaberintoDetailActivity extends AppCompatActivity {
 
     public void mostrarInventario(View view) {
         // nueva activity o fragment
-        // Intent detailIntent = new Intent(this, ...)
+        //Intent detailIntent = new Intent(this, InventarioListActivity.class);
         Toast.makeText(this, "Abrir inventario", Toast.LENGTH_SHORT).show();
-        Intent detailIntent = new Intent(this, InventarioListActivity.class);
-
-        startActivity(detailIntent);
+        Intent listaItems = new Intent(this, InventarioListActivity.class);
+        startActivity(listaItems);
     }
 }
