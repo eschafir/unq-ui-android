@@ -16,6 +16,8 @@ public class InventarioListActivity extends AppCompatActivity implements Inventa
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
         setContentView(R.layout.inventario_lista);
+
+
     }
 
     @Override

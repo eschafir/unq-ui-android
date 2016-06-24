@@ -1,8 +1,10 @@
 package com.example.esteban.gatoencerrado.gatoapp;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
+import android.widget.ListView;
 
 import com.example.esteban.gatoencerrado.adapter.ItemAdapter;
 import com.example.esteban.gatoencerrado.model.Item;
@@ -48,6 +50,32 @@ public class InventarioListFragment extends ListFragment implements View.OnClick
         setListAdapter(new ItemAdapter(
                 getActivity(),
                 RepoLaberintos.getInstance().getListaItems(null, 100)));
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
+        // Activities containing this fragment must implement its callbacks.
+        if (!(activity instanceof Callbacks)) {
+            throw new IllegalStateException("Activity must implement fragment's callbacks.");
+        }
+
+        mCallbacks = (Callbacks) activity;
+    }
+
+    @Override
+    public void onListItemClick(ListView listView, View v, int position, long id) {
+        super.onListItemClick(listView, v, position, id);
+        Item item = (Item) listView.getAdapter().getItem(position);
+        mCallbacks.onItemSelected(item);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+
+        mCallbacks = sDummyCallbacks;
     }
 
     @Override
