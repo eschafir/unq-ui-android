@@ -1,10 +1,13 @@
 package com.example.esteban.gatoencerrado.adapter;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.esteban.gatoencerrado.R;
@@ -27,6 +30,7 @@ public class LaberintoAdapter extends ArrayAdapter<Laberinto> {
         return getItem(position).getId();
     }
 
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) getContext()
@@ -36,6 +40,9 @@ public class LaberintoAdapter extends ArrayAdapter<Laberinto> {
 
         TextView tvLaberinto = (TextView) rowView.findViewById(R.id.lblLaberinto);
         tvLaberinto.setText(laberinto.getNombre().toString());
+
+        ImageView imLaberinto = (ImageView) rowView.findViewById(R.id.imgLab);
+        imLaberinto.setImageResource(laberinto.getPath());
 
         return rowView;
     }
