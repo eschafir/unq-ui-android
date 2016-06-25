@@ -3,9 +3,11 @@ package com.example.esteban.gatoencerrado.gatoapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.esteban.gatoencerrado.R;
 import com.example.esteban.gatoencerrado.model.Laberinto;
@@ -20,12 +22,14 @@ public class LaberintoListActivity extends AppCompatActivity implements Laberint
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_laberinto_app_bar);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        toolbar.setTitle(getTitle());
+        // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
+        // toolbar.setTitle(getTitle());
 
-        TextView lblTitulo = (TextView)findViewById(R.id.lblTitulo);
+        TextView lblTitulo = (TextView) findViewById(R.id.lblTitulo);
         lblTitulo.setText("Laberintos Disponibles");
+        Button boton = (Button) findViewById(R.id.laberinto_inventario);
+        boton.setText("Gestionar Inventario");
     }
 
     @Override
@@ -38,4 +42,11 @@ public class LaberintoListActivity extends AppCompatActivity implements Laberint
         startActivity(detailIntent);
     }
 
+    public void mostrarInventario(View view) {
+        Toast.makeText(this, "Abrir inventario", Toast.LENGTH_SHORT).show();
+        Intent listaItems = new Intent(this, InventarioListActivity.class);
+        listaItems.putExtra(LaberintoDetailFragment.ARG_ITEM_ID, "laberintoTest");
+
+        startActivity(listaItems);
+    }
 }

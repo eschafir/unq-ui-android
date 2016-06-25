@@ -1,40 +1,36 @@
 package com.example.esteban.gatoencerrado.gatoapp;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.esteban.gatoencerrado.R;
-import com.example.esteban.gatoencerrado.model.Item;
+import com.example.esteban.gatoencerrado.adapter.ItemAdapter;
+import com.example.esteban.gatoencerrado.repo.RepoLaberintos;
 
 /**
- * Created by Esteban on 23/6/2016.
+ * Created by Esteban on 25/6/2016.
  */
-public class InventarioListActivity extends AppCompatActivity implements InventarioListFragment.Callbacks{
+public class InventarioListActivity extends AppCompatActivity {
+
+    private ListView list;
+    private String[] items = {"Ubuntu", "Android", "iOS", "Windows", "Mac OSX",
+            "Google Chrome OS", "Debian", "Mandriva", "Solaris", "Unix"};
+
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
-        setContentView(R.layout.activity_inventario_app_bar);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.invetario_layout);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        toolbar.setTitle(getTitle());
-
-        TextView lblTitulo = (TextView)findViewById(R.id.lblTitulo);
-        lblTitulo.setText("Items Disponibles");
+        TextView titulo = (TextView) findViewById(R.id.tituloInventario);
+        titulo.setText("Inventario");
 
 
-    }
-
-    @Override
-    public void onItemSelected(Item item) {
-
-        /**
-         * No hay comportamiento para esta pantalla.
-         */
-
+        list = (ListView) findViewById(R.id.listview);
+        ListAdapter adaptador = new ItemAdapter(this, RepoLaberintos.getInstance().getListaItems(null, 10));
+        list.setAdapter(adaptador);
     }
 }

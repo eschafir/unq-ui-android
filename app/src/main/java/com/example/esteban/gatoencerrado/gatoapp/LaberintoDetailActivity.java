@@ -1,15 +1,10 @@
 package com.example.esteban.gatoencerrado.gatoapp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.View;
-import android.widget.Toast;
 
 import com.example.esteban.gatoencerrado.R;
-import com.example.esteban.gatoencerrado.model.Item;
 
 public class LaberintoDetailActivity extends AppCompatActivity {
 
@@ -37,11 +32,12 @@ public class LaberintoDetailActivity extends AppCompatActivity {
         }
     }
 
-    public void mostrarInventario(View view) {
-        // nueva activity o fragment
-        //Intent detailIntent = new Intent(this, InventarioListActivity.class);
+/*    public void mostrarInventario(View view) {
+
         Toast.makeText(this, "Abrir inventario", Toast.LENGTH_SHORT).show();
         Intent listaItems = new Intent(this, InventarioListActivity.class);
+        listaItems.putExtra(LaberintoDetailFragment.ARG_ITEM_ID, "laberintoTest");
+
         startActivity(listaItems);
-    }
+    }*/
 }

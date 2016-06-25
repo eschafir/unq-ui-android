@@ -54,7 +54,7 @@ public class LaberintoListFragment extends ListFragment implements View.OnClickL
 
         setListAdapter(new LaberintoAdapter(
                 getActivity(),
-                RepoLaberintos.getInstance().getLaberintos(null, 10)));
+                RepoLaberintos.getInstance().getLaberintos(null, 100)));
     }
 
     @Override

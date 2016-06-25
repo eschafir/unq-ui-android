@@ -70,4 +70,5 @@ public class Laberinto implements Serializable {
         this.path = path;
         this.inventario = inventario;
     }
+
 }

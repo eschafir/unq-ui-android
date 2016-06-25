@@ -21,11 +21,11 @@
         android:textIsSelectable="true"
         tools:context=".LaberintoDetailFragment" />
 
-    <Button
+<!--    <Button
         android:id="@+id/laberinto_inventario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:onClick="mostrarInventario"/>
+        android:onClick="mostrarInventario"/>-->
 
 </LinearLayout>

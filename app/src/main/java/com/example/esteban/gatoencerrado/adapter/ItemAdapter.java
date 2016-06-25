@@ -12,10 +12,9 @@ import com.example.esteban.gatoencerrado.model.Item;
 
 import java.util.List;
 
-/**
- * Created by Esteban on 23/6/2016.
- */
+
 public class ItemAdapter extends ArrayAdapter<Item> {
+
 
     public ItemAdapter(Context context, List<Item> items) {
         super(context, R.layout.inventario_row, items);
@@ -34,7 +33,7 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         View rowView = inflater.inflate(R.layout.inventario_row, parent, false);
         final Item item = getItem(position);
 
-        TextView tvItem = (TextView) rowView.findViewById(R.id.nombreItem);
+        TextView tvItem = (TextView) rowView.findViewById(R.id.lblitem);
         tvItem.setText(item.getNombre().toString());
 
         return rowView;

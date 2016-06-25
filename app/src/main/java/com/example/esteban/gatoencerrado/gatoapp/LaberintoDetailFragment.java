@@ -1,26 +1,22 @@
 package com.example.esteban.gatoencerrado.gatoapp;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.esteban.gatoencerrado.R;
-import com.example.esteban.gatoencerrado.model.Item;
 import com.example.esteban.gatoencerrado.model.Laberinto;
 
 /**
  * Created by Esteban on 19/6/2016.
  */
-public class LaberintoDetailFragment extends Fragment {
+public class LaberintoDetailFragment extends Fragment implements View.OnClickListener {
 
     /**
      * The fragment argument representing the item ID that this fragment
@@ -32,6 +28,7 @@ public class LaberintoDetailFragment extends Fragment {
      * The dummy content this fragment is presenting.
      */
     private Laberinto laberinto;
+
 
     public LaberintoDetailFragment() {
     }
@@ -66,12 +63,15 @@ public class LaberintoDetailFragment extends Fragment {
             ImageView imgLaberinto = ((ImageView) rootView.findViewById(R.id.imgLaberinto));
             imgLaberinto.setImageDrawable(getResources().getDrawable(laberinto.getPath()));
             ((TextView) rootView.findViewById(R.id.laberinto_descripcion)).setText(laberinto.getDescripcion());
-            Button inventario = ((Button) rootView.findViewById(R.id.laberinto_inventario));
-            inventario.setText("Inventario");
-
         }
 
         return rootView;
     }
 
+
+    @Override
+    public void onClick(View v) {
+
+
+    }
 }
